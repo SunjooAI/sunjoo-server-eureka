@@ -46,6 +46,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd /home/ubuntu/sunjoo-server-eureka
+            git pull origin main
             docker-compose down
             docker pull ${{ secrets.DOCKER_USERNAME }}/eureka:latest
             docker-compose -f "docker-compose.yml" up -d --build
