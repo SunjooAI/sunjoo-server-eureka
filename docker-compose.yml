@@ -8,3 +8,9 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 8761:8761
+    networks:
+      - eureka-network
+
+networks:
+  eureka-network:
+    driver: bridge
