@@ -47,5 +47,6 @@ jobs:
           script: |
             cd /home/ubuntu/sunjoo-server-eureka
             docker-compose down
+            git pull origin main
             docker pull ${{ secrets.DOCKER_USERNAME }}/eureka:latest
             docker-compose up -d --build
