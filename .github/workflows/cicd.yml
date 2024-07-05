@@ -50,5 +50,5 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/eureka:latest
             docker-compose build
             docker-compose up -d
-            docker network connect eureka-network sunjoo-server-eureka-eureka-1
-            docker restart sunjoo-server-eureka-eureka-1
+            docker network connect eureka-network sunjoo-server-eureka_eureka_1
+            docker restart sunjoo-server-eureka_eureka_1
